@@ -1,0 +1,6 @@
+datasets
+transformers
+py7zr
+evaluate
+rouge_score
+loralib peft

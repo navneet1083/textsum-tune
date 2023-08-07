@@ -1,0 +1,11 @@
+apiVersion: v1
+device: 'mps' # 'mps' for mac and 'cuda:0' for ubuntu
+training_param:
+  dataset_loc:
+    path: ''
+  checkpoints_path: './checkpoints/dialogue-summary-training-'
+  learning_rate: 1e-5
+  num_train_epoch: 1
+  weight_decay: 0.01
+  logging_steps: 1
+  max_steps: 10
