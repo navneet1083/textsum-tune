@@ -5,7 +5,7 @@ import time
 
 
 class StartTraining(LLMModelBuilder):
-    def __init__(self, tokenized_datasets, model):
+    def __init__(self, tokenized_datasets, cls):
         super().__init__()
         self.tokenized_datasets = tokenized_datasets
         self.model = model
@@ -27,7 +27,7 @@ class StartTraining(LLMModelBuilder):
             logging_steps=self.log_steps,
             max_steps=self.max_steps
         )
-        print(f'model : {self.model}')
+        print(f'cls : {self.model}')
 
         trainer = Trainer(
             model=self.model,

@@ -1,7 +1,9 @@
 from datasetloader.datasetloader import DatasetLoader
+
 from models.modelbuilder import LLMModelBuilder
 from models.tokenbuilder import TokenizerBuilder
 from models.training import StartTraining
+from tunings.finetune import FineTune
 
 
 def train_llm():
@@ -20,8 +22,13 @@ def train_llm():
 
     print(f'after tokenized datasets \n: {tokenized_datasets}')
 
-    st_train = StartTraining(tokenized_datasets, original_model)
-    st_train.go()
+    # for full fine-tuning
+    # st_train = StartTraining(tokenized_datasets, original_model)
+    # st_train.go()
+
+    # for PEFT fine-tuning
+    fnt = FineTune(model=original_model, tokenized_datasets=tokenized_datasets)
+    fnt.tune()
 
 
 

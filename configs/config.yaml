@@ -9,3 +9,17 @@ training_param:
   weight_decay: 0.01
   logging_steps: 1
   max_steps: 10
+finetune_param:
+  lora_config:
+    lora_rank: 32
+    lora_alpha: 32
+    target_modules: ['q', 'v']
+    dropout: 0.05
+    bias: 'none'
+    checkpoints_path: './checkpoints/peft-dialogue-summary-training-'
+  peft_config:
+    auto_fine_batch_size: True
+    learning_rate: 1e-3
+    num_train_epochs: 1
+    logging_steps: 1
+    max_steps: 1

@@ -8,7 +8,7 @@ class TokenizerBuilder(LLMModelBuilder):
         super().__init__()
         self.remove_columns = ['id', 'dialogue', 'summary']
 
-    def get_tokenizer(self):
+    def                          get_tokenizer(self):
         print(f'Loading {self.model_name} tokenizer')
         tokenizer = AutoTokenizer.from_pretrained(self.model_name, use_fast=True)
         return tokenizer

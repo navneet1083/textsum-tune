@@ -1,6 +1,7 @@
-datasets
-transformers
-py7zr
-evaluate
-rouge_score
-loralib peft
+datasets==2.11.0
+transformers==4.27.2
+py7zr==0.20.6
+evaluate==0.4.0
+rouge_score==0.1.2
+loralib==0.1.1
+peft==0.3.0
